@@ -2,7 +2,7 @@ import streamlit as st
 
 # 1. Cấu hình trang web
 st.set_page_config(
-    page_title="NHÀ HÀNG NHẬT OISHI UDON & RAMEN",
+    page_title="OISHI UDON & RAMEN",
     page_icon="🍜",
     layout="wide"
 )
@@ -18,7 +18,7 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-st.title("🍜 RAMEN & UDON OISHI JAPANESE RESTAURANT")
+st.title("RAMEN & UDON OISHI")
 st.markdown("<p class='subtitle'>Thực Đơn Mì & Cơm Nhật Bản - Đặt Món Trực Tuyến</p>", unsafe_allow_html=True)
 
 # 2. DỮ LIỆU MENU
@@ -84,6 +84,8 @@ drink_menu = [
     {"name": "Saigon Special", "price": 35000},
     {"name": "Saigon Chill", "price": 35000}
 ]
+# Gộp tất cả menu lại để phục vụ tính năng tìm kiếm
+all_menu = udon_menu + ramen_menu + kingkong_menu + rice_menu + side_menu + drink_menu
 
 # 3. Khởi tạo Giỏ hàng trong Session State
 if "cart" not in st.session_state:
