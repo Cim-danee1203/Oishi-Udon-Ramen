@@ -101,7 +101,7 @@ col_menu, col_cart = st.columns([2.2, 1])
 with col_menu:
     st.caption("📌 *Tất cả giá niêm yết bên dưới chưa bao gồm 8% VAT.*")
     tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
-        "🍲 UDON", "🍜 RAMEN", "🦍 SIZE KING KONG", "🍱 MÓN CƠM", "🥟 MÓN PHỤ", "🥤 NƯỚC UỐNG"
+        " UDON", " RAMEN", " SIZE KING KONG", " MÓN CƠM", " MÓN PHỤ", " NƯỚC UỐNG"
     ])
 
     # --- TAB 1: UDON ---
@@ -221,7 +221,7 @@ with col_cart:
                     if payment == "Chuyển khoản VietQR":
                         st.info("Quét mã VietQR bên dưới để thanh toán:")
                         # Thay ngân hàng & STK thật của bạn tại đây:
-                        bank_id = "MB"          # MBBank, VCB, ACB, TPB...
+                        bank_id = "MB"          # MBBank, VCB, ACB, TPB, TCB...
                         account_num = "0987654321" 
                         account_name = "NHA HANG RAMEN UDON"
                         qr_url = f"https://img.vietqr.io/image/{bank_id}-{account_num}-compact.png?amount={total}&addInfo=DATMON%20{phone}&accountName={account_name}"
